@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "pftx";
+    src: url("pftx.eot"); /* IE9 */
+    src: url("pftx.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("pftx.woff") format("woff"), /* chrome、firefox */
+    url("pftx.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("pftx.svg#pftx") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
