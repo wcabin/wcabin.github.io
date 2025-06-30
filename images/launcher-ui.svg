@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- 左侧边栏 -->
+    <rect x="0" y="0" width="56" height="600" fill="#f5f5f5" />
+    <rect x="0" y="0" width="56" height="56" fill="#f5f5f5" />
+    <circle cx="28" cy="28" r="16" fill="#e74c3c" />
+    
+    <rect x="18" y="98" width="20" height="20" fill="#555555" />
+    <rect x="18" y="148" width="20" height="20" fill="#555555" />
+    
+    <!-- 顶部标题栏 -->
+    <rect x="56" y="0" width="744" height="40" fill="#f5f5f5" />
+    <rect x="744" y="15" width="15" height="2" fill="#666666" />
+    <rect x="774" y="15" width="10" height="10" fill="#666666" />
+    
+    <!-- 顶部渐变横幅 -->
+    <defs>
+        <linearGradient id="banner-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ff8a00" />
+            <stop offset="50%" style="stop-color:#e52e71" />
+            <stop offset="100%" style="stop-color:#2857be" />
+        </linearGradient>
+    </defs>
+    <rect x="56" y="40" width="744" height="170" fill="url(#banner-gradient)" />
+    <rect x="720" y="180" width="60" height="25" rx="4" ry="4" fill="rgba(255,255,255,0.2)" />
+    
+    <!-- 公告栏 -->
+    <rect x="56" y="210" width="744" height="70" fill="#fff2e8" />
+    <circle cx="90" cy="245" r="20" fill="#ff6600" />
+    <rect x="1140" y="245" width="40" height="20" rx="4" ry="4" fill="#ff6600" opacity="0" />
+    
+    <!-- 标签页 -->
+    <rect x="56" y="280" width="744" height="40" fill="#ffffff" />
+    <rect x="56" y="280" width="120" height="40" fill="#ffffff" />
+    <rect x="56" y="318" width="120" height="2" fill="#8e44ad" />
+    <rect x="176" y="280" width="120" height="40" fill="#ffffff" />
+    
+    <!-- 文件区域 -->
+    <rect x="56" y="320" width="744" height="220" fill="#ffffff" />
+    
+    <!-- 文件图标 -->
+    <g transform="translate(100, 380)">
+        <rect width="60" height="60" rx="5" ry="5" fill="#e0e0e0" />
+    </g>
+    <g transform="translate(220, 380)">
+        <rect width="60" height="60" rx="5" ry="5" fill="#e0e0e0" />
+    </g>
+    <g transform="translate(600, 380)">
+        <rect width="60" height="60" rx="5" ry="5" fill="#e0e0e0" />
+    </g>
+    
+    <!-- 底部状态栏 -->
+    <rect x="56" y="540" width="744" height="60" fill="#f5f5f5" />
+    <rect x="80" y="560" width="300" height="2" fill="#cccccc" />
+    <circle cx="650" cy="560" r="5" fill="#4caf50" />
+    <rect x="700" y="550" width="80" height="30" rx="4" ry="4" fill="#ff6600" />
+</svg>
