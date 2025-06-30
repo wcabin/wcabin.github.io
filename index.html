@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESF EVOLUTION 启动器</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <!-- 添加 jQuery 库 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- 添加 AOS 动画库 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- 页面载入动画 -->
+    <div class="page-loader">
+        <div class="loader">
+            <svg class="loader-circle" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+            </svg>
+            <div class="loader-text">ESF EVOLUTION</div>
+        </div>
+    </div>
+
+    <div class="app">
+        <header class="header">
+            <div class="container header-container">
+                <div class="logo">ESF EVOLUTION</div>
+                <nav class="main-nav">
+                    <ul class="nav-list" id="mobileMenu">
+                        <li class="nav-item"><a href="#hero" class="nav-link active">首页</a></li>
+                        <li class="nav-item"><a href="#features" class="nav-link">特性</a></li>
+                        <li class="nav-item"><a href="#download" class="nav-link">下载</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">关于</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="菜单" id="menuToggle">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- 英雄区 -->
+            <section id="hero" class="section hero-section active">
+                <div class="container hero-container">
+                    <div class="hero-content" data-aos="fade-right" data-aos-duration="800" data-aos-delay="0">
+                        <h1 class="hero-title">ESF EVOLUTION 启动器</h1>
+                        <p class="hero-subtitle">简洁、高效、美观的游戏启动解决方案</p>
+                        <div class="hero-cta">
+                            <a href="#download" class="btn btn-primary" data-page="download">立即下载</a>
+                            <a href="#features" class="btn btn-outline" data-page="features">了解更多</a>
+                        </div>
+                    </div>
+                    <div class="hero-image" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                        <img src="./images/bg0.png" alt="ESF启动器预览" class="preview-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 特性区 -->
+            <section id="features" class="section features-section">
+                <div class="container">
+                    <div class="section-header" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                        <h2 class="section-title">强大特性</h2>
+                        <p class="section-subtitle">为您提供卓越的游戏启动体验</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                            <div class="feature-icon">
+                                <span class="material-symbols-rounded">dns</span>
+                            </div>
+                            <h3 class="feature-title">服务器列表管理</h3>
+                            <p class="feature-description">轻松管理和切换不同的游戏服务器，一键连接您喜爱的游戏世界。</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+                            <div class="feature-icon">
+                                <span class="material-symbols-rounded">person</span>
+                            </div>
+                            <h3 class="feature-title">玩家名称编辑</h3>
+                            <p class="feature-description">随时修改您的游戏角色名称，展现个性，彰显风采。</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+                            <div class="feature-icon">
+                                <span class="material-symbols-rounded">palette</span>
+                            </div>
+                            <h3 class="feature-title">界面美观</h3>
+                            <p class="feature-description">精心设计的用户界面，简洁大方，操作直观。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 下载区 -->
+            <section id="download" class="section download-section">
+                <div class="container">
+                    <div class="section-header" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                        <h2 class="section-title">立即下载</h2>
+                        <p class="section-subtitle">获取最新版本，享受全新体验</p>
+                    </div>
+                    
+                    <div class="download-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+                        <div class="version-badge">V2.0.1 正式版</div>
+                        
+                        <div class="download-info">
+                            <div class="info-item">
+                                <span class="info-icon material-symbols-rounded">calendar_today</span>
+                                <span class="info-label">发布日期：</span>
+                                <span class="info-value">2025年7月1日</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon material-symbols-rounded">data_object</span>
+                                <span class="info-label">程序大小：</span>
+                                <span class="info-value">9.05MB</span>
+                            </div>
+                        </div>
+                        
+                        <div class="download-actions">
+                            <a href="./downloads/ESFLauncher-Setup-1.0.2.exe" class="btn btn-primary btn-large download-btn">
+                                <span class="material-symbols-rounded">download</span>
+                                下载启动器
+                            </a>
+                        </div>
+                        
+                        <div class="update-info" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+                            <div class="update-header">更新内容</div>
+                            <div class="update-grid">
+                                <div class="update-column added">
+                                    <h4 class="update-title">
+                                        <span class="material-symbols-rounded">add_circle</span>
+                                        新增功能
+                                    </h4>
+                                    <ul class="update-list">
+                                        <li>服务器列表功能</li>
+                                        <li>玩家名称编辑</li>
+                                    </ul>
+                                </div>
+                                <div class="update-column removed">
+                                    <h4 class="update-title">
+                                        <span class="material-symbols-rounded">remove_circle</span>
+                                        移除功能
+                                    </h4>
+                                    <ul class="update-list">
+                                        <li>不需要的文件夹管理功能</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="system-requirements" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                            <div class="requirement-icon">
+                                <span class="material-symbols-rounded">info</span>
+                            </div>
+                            <div class="requirement-text">
+                                <p>该启动器需要 .NET 8.0 环境：.NET Desktop Runtime 8.0.17</p>
+                                <a href="https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/runtime-desktop-8.0.17-windows-x64-installer" class="dotnet-link">点击此处下载安装</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关于区 -->
+            <section id="about" class="section about-section">
+                <div class="container">
+                    <div class="section-header" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                        <h2 class="section-title">关于我们</h2>
+                        <p class="section-subtitle">了解ESF EVOLUTION团队</p>
+                    </div>
+                    
+                    <div class="about-content" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+                        <p>ESF EVOLUTION 启动器是一款专为游戏爱好者设计的高效启动工具。我们致力于提供最流畅、最便捷的游戏启动体验。</p>
+                        <p>我们的团队由一群热爱游戏的开发者组成，我们深知玩家的需求，不断优化产品，为玩家带来更好的体验。</p>
+                        <p>如果您有任何建议或反馈，欢迎随时联系我们。</p>
+                        
+                        <div class="community-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                            <h3 class="community-title">加入我们的社区</h3>
+                            <div class="community-groups">
+                                <div class="group-item">
+                                    <span class="group-icon material-symbols-rounded">group</span>
+                                    <div class="group-info">
+                                        <div class="group-name">QQ群: 120935648</div>
+                                        <div class="group-desc">技术交流、格斗资源</div>
+                                    </div>
+                                </div>
+                                <div class="group-item">
+                                    <span class="group-icon material-symbols-rounded">group</span>
+                                    <div class="group-info">
+                                        <div class="group-name">QQ群: 213660865</div>
+                                        <div class="group-desc">插件、模型、教学资源</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="community-note">群内拥有各种技术、格斗、插件、模型、教学资源，欢迎加入！</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">ESF EVOLUTION</div>
+                    <div class="footer-copyright">Copyright &copy; 2025 冥狐. All Rights Reserved.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/scroll.js"></script>
+</body>
+</html> 
