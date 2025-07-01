@@ -1,0 +1,46 @@
+# 禁止浏览器缓存HTML、CSS、JS文件
+/*.html
+  Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/*.css
+  Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/*.js
+  Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# 允许图片和字体等静态资源缓存
+/*.ico
+  Cache-Control: public, max-age=2592000
+
+/*.gif
+  Cache-Control: public, max-age=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.svg
+  Cache-Control: public, max-age=2592000
+
+/*.woff
+  Cache-Control: public, max-age=2592000
+
+/*.woff2
+  Cache-Control: public, max-age=2592000
+
+/*.ttf
+  Cache-Control: public, max-age=2592000
+
+/*.eot
+  Cache-Control: public, max-age=2592000 
