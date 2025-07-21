@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESF EVOLUTION 启动器</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="background.DGCcuuQ5.svg" fetchpriority="high" class="fixed inset-0 w-full h-full -z-10 blur-[100px]">
+
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-text">ESF EVOLUTION</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight">ESF EVOLUTION</span> 启<br>
+                        动器
+                    </h1>
+                    <p class="hero-subtitle">
+                        简洁、高效、美观的游戏启动解决方案
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#" class="btn-primary" onclick="downloadWithPassword(event)">立即下载</a>
+                        <a href="#" class="btn-secondary" onclick="showScreenshots()">查看截图</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="bg0.jpg" alt="ESF Evolution Launcher" class="launcher-preview">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-title">ESF EVOLUTION</span>
+            </div>
+            <div class="footer-right">
+                <span class="copyright">Copyright © 2025 冥狐. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function downloadWithPassword(event) {
+            event.preventDefault();
+
+            const password = '8ivv';
+            navigator.clipboard.writeText(password).then(() => {
+                showPasswordCopiedNotification();
+                setTimeout(() => {
+                    window.open('https://inside.lanzoub.com/ijqFJ31joj5c', '_blank');
+                }, 2000);
+            }).catch(() => {
+                showPasswordCopiedNotification();
+                setTimeout(() => {
+                    window.open('https://inside.lanzoub.com/ijqFJ31joj5c', '_blank');
+                }, 2000);
+            });
+        }
+
+        function showPasswordCopiedNotification() {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 0.7);
+                color: #1f2937;
+                padding: 20px 30px;
+                border-radius: 12px;
+                font-size: 16px;
+                font-weight: 500;
+                z-index: 10000;
+                backdrop-filter: blur(30px);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+                animation: fadeInOut 2s ease-in-out;
+            `;
+
+            notification.innerHTML = `
+                <div style="margin-bottom: 8px; color: #1f2937;">密码已复制到剪贴板</div>
+                <div style="font-size: 14px; opacity: 0.7; color: #374151;">密码: 8ivv</div>
+                <div style="font-size: 12px; opacity: 0.6; margin-top: 8px; color: #6b7280;">正在跳转到下载页面...</div>
+            `;
+
+            if (!document.querySelector('#notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes fadeInOut {
+                        0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+                        20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                        80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                        100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 3000);
+        }
+
+        function showScreenshots() {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                backdrop-filter: blur(10px);
+            `;
+
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: white;
+                border-radius: 16px;
+                padding: 2rem;
+                max-width: 90%;
+                max-height: 90%;
+                overflow: auto;
+                position: relative;
+            `;
+
+            content.innerHTML = `
+                <button onclick="this.parentElement.parentElement.remove()" style="
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    background: none;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    color: #666;
+                ">×</button>
+                <h2 style="margin-bottom: 1rem; color: #1f2937;">ESF EVOLUTION 截图</h2>
+                <div style="display: grid; gap: 1rem;">
+                    <img src="bg0.jpg" alt="ESF Evolution Screenshot" style="
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                    ">
+                </div>
+            `;
+
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
